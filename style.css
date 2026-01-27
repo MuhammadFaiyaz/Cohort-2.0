@@ -1,0 +1,176 @@
+/* #1A2434 */
+
+@font-face {
+    font-family: Unicorn;
+    src: url(./Mulish-VariableFont_wght.ttf);
+    font-weight: 100 900;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Unicorn;
+
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    background: #f2f2fa;
+}
+
+header {
+    background: #1A2434;
+    height: 180px;
+    color: rgb(238, 236, 236);
+    text-align: center;
+    
+}
+
+header h1 {
+    padding-top: 50px;
+    font-size: 35px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+header p {
+    font-size: 17px;
+    font-weight: 100;
+    font-style: italic;
+    text-transform: capitalize;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+.width {
+    width: 80%;
+    margin: 25px auto;
+}
+
+.about-me{
+    background: #ffffff;
+    text-align: center; 
+    padding-top: 20px;  
+    height: 170px;
+}
+.about-me >h3{
+    margin-top: 25px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 25px;
+}
+.about-me >p {
+    margin-top: 20px;
+    padding: 0 45px;
+    font-weight: 100;
+}
+
+.education {
+    background: #DAF0FF;
+    padding: 30px 0px;
+    text-align: center;
+}
+.education >h3{
+    margin-top: 25px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.education > div {
+    margin: 8px auto;
+    font-weight: 400;
+    background: #ffffff;
+    width: 60%;
+    text-align: center;
+    
+}
+
+.education > div > p {
+    padding: 10px 0;
+}
+
+.skills {
+    background: #FEF0BF;
+    padding: 30px 0px;
+    text-align: center;
+    /* height: 230px; */
+}
+
+.skills h3 {
+    font-weight: 800;
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.skills > div {
+    margin: 8px auto;
+    font-weight: 400;
+    background: #ffffff;
+    width: 60%;
+    text-align: center;
+    
+    
+}
+.skills p {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.skills > div > p {
+    padding: 10px 0;
+}
+
+.projects {
+    background: #EBE6FE;
+    padding: 30px 0px;
+    text-align: center;
+}
+
+.projects > h3 {
+    font-weight: 800;
+    font-size: 25px;
+    margin-bottom: 20px;
+    text-transform: uppercase;    
+}
+
+.projects > div {
+    margin: 8px auto;
+    font-weight: 400;
+    background: #ffffff;
+    width: 60%;
+    text-align: center;    
+}
+
+.projects > div > p {
+    padding: 10px 0;
+    font-style: italic;
+}
+
+.contact-me {
+    background: #D7FCE3;
+    padding: 30px 0px;
+    text-align: center;
+}
+
+.contact-me div {
+    margin: 8px auto;
+    font-weight: 400;
+    background: #ffffff;
+    width: 60%;
+    text-align: center;
+}
+.contact-me > div > p {
+    padding: 10px 0;
+}
+
+footer {
+    background: #1A2434;
+    text-align: center;
+    padding: 30px 0px;
+    color: #ffffff;
+
+}
