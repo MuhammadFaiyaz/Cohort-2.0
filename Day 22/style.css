@@ -21,37 +21,71 @@ body {
 
 main {
   background-color: #ffffff;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 1fr;
-  gap: var(--spacing-sm);
-  height: 100vh;
-  overflow: hidden;
-  padding: var(--spacing-sm);
-}
-main img {
-  width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border: 1px solid #000;
-}
-main .bottom {
+  width: 100%;
   display: flex;
-  grid-column: 2;
-  grid-row: 2;
+  padding: var(--spacing-sm);
   gap: var(--spacing-sm);
 }
-main .bottom img {
+main .right {
+  background-color: #000000;
+  width: 40%;
+}
+main .right img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  flex: 1;
 }
 main .left {
-  grid-row: 1/3;
+  width: 60%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
 }
-main .top {
-  grid-row: 1;
+main .left .top {
+  background: #000000;
+  height: 50%;
+}
+main .left .top img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .left .bottom {
+  height: 50%;
+  display: flex;
+  gap: var(--spacing-sm);
+}
+main .left .bottom .box {
+  flex: 1;
+}
+main .left .bottom .box:nth-child(1) {
+  background: #afb156;
+}
+main .left .bottom .box:nth-child(1) img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .left .bottom .box:nth-child(2) {
+  background: #56b1af;
+}
+main .left .bottom .box:nth-child(2) img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .left .bottom .box:nth-child(3) {
+  background: #af56b1;
+}
+main .left .bottom .box:nth-child(3) img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
