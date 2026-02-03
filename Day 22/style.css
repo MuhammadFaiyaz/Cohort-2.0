@@ -1,0 +1,57 @@
+:root {
+  --spacing-none: 0;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: var(--spacing-none);
+  padding: var(--spacing-none);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  background-color: #ffffff;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  gap: var(--spacing-sm);
+  height: 100vh;
+  overflow: hidden;
+  padding: var(--spacing-sm);
+}
+main img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid #000;
+}
+main .bottom {
+  display: flex;
+  grid-column: 2;
+  grid-row: 2;
+  gap: var(--spacing-sm);
+}
+main .bottom img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  flex: 1;
+}
+main .left {
+  grid-row: 1/3;
+}
+main .top {
+  grid-row: 1;
+}/*# sourceMappingURL=style.css.map */
