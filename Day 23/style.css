@@ -1,0 +1,123 @@
+@font-face {
+  font-family: Saifi;
+  src: url(./63cffc20aa8997095067596f_Satoshi-Light.woff);
+}
+@font-face {
+  font-family: Rafi;
+  src: url(./L0x5DF4xlVMF-BfR8bXMIjhLq38.woff2);
+}
+@font-face {
+  font-family: Chill;
+  src: url(./63cffc0a3942456e003bc265_Chillax-Regular.woff);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+}
+
+body {
+  background: #121212;
+  font-family: Saifi;
+}
+
+main {
+  width: 100%;
+  color: white;
+}
+main section {
+  flex-direction: column;
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem;
+}
+main section .top {
+  width: 100%;
+}
+main section .top img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  opacity: 0.8;
+}
+main section .bottom {
+  width: 100%;
+  background-color: #242424;
+  padding: 1.75rem;
+  border-radius: 10px;
+  flex-direction: column;
+  display: flex;
+  gap: 4rem;
+  justify-content: space-between;
+}
+main section .bottom .text-up {
+  opacity: 0.8;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: Rafi;
+}
+main section .bottom .text-down {
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+}
+main section .bottom .text-down button {
+  width: -moz-fit-content;
+  width: fit-content;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: Rafi;
+  opacity: 0.8;
+  color: white;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+main section .bottom .text-down button i {
+  font-size: 1.5rem;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+main section .bottom .text-down h1 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  font-family: Chill;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+main section .bottom .text-down p {
+  font-size: 1.4rem;
+  font-weight: 200;
+  font-family: Saifi;
+  line-height: 1.5;
+  opacity: 0.7;
+}
+
+@media (min-width: 600px) {
+  main section {
+    flex-direction: row;
+  }
+  main section .bottom {
+    padding: 3rem;
+  }
+  main section .bottom .text-up {
+    color: #f4f2ed;
+    font-size: 0.85rem;
+    font-weight: 100;
+    font-family: Rafi;
+  }
+  main section .bottom .text-down h1 {
+    font-size: 3.6rem;
+    font-weight: 400;
+    font-family: Chill;
+  }
+}/*# sourceMappingURL=style.css.map */

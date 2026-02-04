@@ -27,63 +27,64 @@ main {
   padding: var(--spacing-sm);
   gap: var(--spacing-sm);
 }
-main .right {
+main .left {
   background-color: #000000;
   width: 40%;
 }
-main .right img {
+main .left img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .left {
+main .right {
   width: 60%;
   background: #ffffff;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
 }
-main .left .top {
+main .right .top {
   background: #000000;
   height: 50%;
 }
-main .left .top img {
+main .right .top img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .left .bottom {
+main .right .bottom {
   height: 50%;
   display: flex;
   gap: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
 }
-main .left .bottom .box {
+main .right .bottom .box {
   flex: 1;
 }
-main .left .bottom .box:nth-child(1) {
+main .right .bottom .box:nth-child(1) {
   background: #afb156;
 }
-main .left .bottom .box:nth-child(1) img {
+main .right .bottom .box:nth-child(1) img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .left .bottom .box:nth-child(2) {
+main .right .bottom .box:nth-child(2) {
   background: #56b1af;
 }
-main .left .bottom .box:nth-child(2) img {
+main .right .bottom .box:nth-child(2) img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-main .left .bottom .box:nth-child(3) {
+main .right .bottom .box:nth-child(3) {
   background: #af56b1;
 }
-main .left .bottom .box:nth-child(3) img {
+main .right .bottom .box:nth-child(3) img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;

@@ -1,0 +1,70 @@
+@mixin img() {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+:root {
+  // margin and padding
+  --spacing-none: 0;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: var(--spacing-none);
+  padding: var(--spacing-none);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  background: #242323;
+  display: grid;
+  padding: var(--spacing-sm);
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas:
+    "left left left left right right right right right right"
+    "left left left left right right right right right right";
+  gap: var(--spacing-sm);
+  .left {
+    grid-area: left;
+    img {
+      @include img();
+    }
+  }
+  .right {
+    *{
+        min-height: 0;
+    }
+    grid-area: right;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: var(--spacing-sm);
+    overflow: hidden;
+    .top {
+      img {
+        @include img();
+      }
+    }
+    .bottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: var(--spacing-sm);
+      img {
+        @include img();
+      }
+    }
+  }
+}

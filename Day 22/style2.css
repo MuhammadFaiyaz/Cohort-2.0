@@ -1,0 +1,68 @@
+:root {
+  --spacing-none: 0;
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: var(--spacing-none);
+  padding: var(--spacing-none);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  background: #242323;
+  display: grid;
+  padding: var(--spacing-sm);
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas: "left left left left right right right right right right" "left left left left right right right right right right";
+  gap: var(--spacing-sm);
+}
+main .left {
+  grid-area: left;
+}
+main .left img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .right {
+  grid-area: right;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: var(--spacing-sm);
+  overflow: hidden;
+}
+main .right * {
+  min-height: 0;
+}
+main .right .top img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .right .bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--spacing-sm);
+}
+main .right .bottom img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=style2.css.map */
