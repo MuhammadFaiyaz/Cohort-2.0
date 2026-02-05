@@ -31,24 +31,27 @@ body {
 main {
   width: 100%;
   color: white;
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
 }
-main section {
+main .section1 {
   flex-direction: column;
   display: flex;
   gap: 0.75rem;
   padding: 1rem;
 }
-main section .top {
+main .section1 .top {
   width: 100%;
 }
-main section .top img {
+main .section1 .top img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
   opacity: 0.8;
 }
-main section .bottom {
+main .section1 .bottom {
   width: 100%;
   background-color: #242424;
   padding: 1.75rem;
@@ -58,18 +61,18 @@ main section .bottom {
   gap: 4rem;
   justify-content: space-between;
 }
-main section .bottom .text-up {
+main .section1 .bottom .text-up {
   opacity: 0.8;
   font-size: 1rem;
   font-weight: 300;
   font-family: Rafi;
 }
-main section .bottom .text-down {
+main .section1 .bottom .text-down {
   flex-direction: column;
   display: flex;
   gap: 1rem;
 }
-main section .bottom .text-down button {
+main .section1 .bottom .text-down button {
   width: -moz-fit-content;
   width: fit-content;
   background: transparent;
@@ -82,42 +85,175 @@ main section .bottom .text-down button {
   text-transform: uppercase;
   cursor: pointer;
 }
-main section .bottom .text-down button i {
+main .section1 .bottom .text-down button i {
   font-size: 1.5rem;
   vertical-align: middle;
   margin-right: 0.5rem;
 }
-main section .bottom .text-down h1 {
+main .section1 .bottom .text-down h1 {
   font-size: 2.2rem;
   font-weight: 500;
   font-family: Chill;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-main section .bottom .text-down p {
+main .section1 .bottom .text-down p {
   font-size: 1.4rem;
   font-weight: 200;
   font-family: Saifi;
   line-height: 1.5;
   opacity: 0.7;
 }
+main .section2 {
+  flex-direction: column;
+  display: flex;
+  gap: 2rem;
+  padding: 1rem 3rem;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .section2 .left,
+main .section2 .right {
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  text-align: center;
+}
+main .section2 .left h4,
+main .section2 .right h4 {
+  font-size: 0.9rem;
+  font-weight: 200;
+  font-family: Rafi;
+  opacity: 0.7;
+  letter-spacing: 2px;
+}
+main .section2 .left p,
+main .section2 .right p {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: Chill;
+  line-height: 1.5;
+  letter-spacing: 2px;
+}
+main .section3 {
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+main .section3 .photo {
+  width: 100%;
+}
+main .section3 .photo img {
+  width: 100%;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .section3 .card {
+  background: #1e1e1e;
+  padding: 2rem;
+  flex-direction: column;
+  display: flex;
+  gap: 3rem;
+  border-radius: 10px;
+}
+main .section3 .card .heading-content h6 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: Rafi;
+  opacity: 0.9;
+  text-transform: uppercase;
+}
+main .section3 .card .bottom-content {
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+}
+main .section3 .card .bottom-content h3 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: Chill;
+}
+main .section3 .card .bottom-content p {
+  font-size: 1.1rem;
+  font-weight: 200;
+  font-family: Saifi;
+  line-height: 1.4;
+  word-spacing: 2px;
+  opacity: 0.6;
+}
 
 @media (min-width: 600px) {
-  main section {
+  main .section1 {
     flex-direction: row;
   }
-  main section .bottom {
+  main .section1 .bottom {
     padding: 3rem;
   }
-  main section .bottom .text-up {
+  main .section1 .bottom .text-up {
     color: #f4f2ed;
     font-size: 0.85rem;
     font-weight: 100;
     font-family: Rafi;
   }
-  main section .bottom .text-down h1 {
+  main .section1 .bottom .text-down h1 {
     font-size: 3.6rem;
     font-weight: 400;
     font-family: Chill;
+  }
+  main .section2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5rem;
+    padding: 2rem 2.5rem;
+  }
+  main .section2 .left,
+  main .section2 .right {
+    display: contents;
+  }
+  main .section2 .left p,
+  main .section2 .right p {
+    font-size: 4rem;
+    font-weight: 500;
+    font-family: Chill;
+  }
+  main .section3 {
+    flex-direction: row-reverse;
+  }
+  main .section3 .card {
+    width: 50%;
+    padding: 3rem;
+  }
+  main .section3 .card .heading-content h6 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    font-family: Rafi;
+    letter-spacing: 1px;
+  }
+  main .section3 .card .bottom-content h3 {
+    font-size: 2.9rem;
+    font-weight: 500;
+    font-family: Chill;
+    opacity: 0.9;
+  }
+  main .section3 .card .bottom-content p {
+    flex-direction: column;
+    display: flex;
+    gap: 2.5rem;
+    flex-direction: row;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    font-weight: 200;
+    font-family: Saifi;
+    opacity: 0.6;
+  }
+  main .section3 .card .bottom-content p span {
+    display: block;
+  }
+  main .section3 .photo {
+    width: 50%;
   }
 }/*# sourceMappingURL=style.css.map */

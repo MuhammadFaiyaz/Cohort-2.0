@@ -39,7 +39,8 @@ body {
 main {
   width: 100%;
   color: white;
-  section {
+  @include center-flex(1rem);
+  .section1 {
     @include center-flex(0.75rem);
     padding: 1rem;
     .top {
@@ -93,11 +94,71 @@ main {
       }
     }
   }
+  .section2 {
+    @include center-flex(2rem);
+    padding: 1rem 3rem;
+    flex-direction: row;
+    justify-content: space-between;
+    .left,
+    .right {
+      @include center-flex(1rem);
+      justify-content: space-between;
+      text-align: center;
+      h4 {
+        @include font(0.9rem, 200, Rafi);
+        opacity: 0.7;
+        letter-spacing: 2px;
+      }
+      p {
+        @include font(2rem, 500, Chill);
+        line-height: 1.5;
+        letter-spacing: 2px;
+      }
+    }
+  }
+  .section3 {
+    @include center-flex(1rem);
+    padding: 1rem;
+    .photo {
+      width: 100%;
+      img {
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+    }
+    .card {
+      background: #1e1e1e;
+      padding: 2rem;
+      @include center-flex(3rem);
+      border-radius: 10px;
+      .heading-content {
+        h6 {
+          @include font(0.9rem, 500, Rafi);
+          opacity: 0.9;
+          text-transform: uppercase;
+        }
+      }
+      .bottom-content {
+        @include center-flex(1rem);
+        h3 {
+          text-transform: uppercase;
+          @include font(2rem, 500, Chill);
+        }
+        p {
+          @include font(1.1rem, 200, Saifi);
+          line-height: 1.4;
+          word-spacing: 2px;
+          opacity: 0.6;
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 600px) {
   main {
-    section {
+    .section1 {
       flex-direction: row;
       .bottom {
         padding: 3rem;
@@ -106,12 +167,55 @@ main {
           @include font(0.85rem, 100, Rafi);
         }
         .text-down {
-          h1{
+          h1 {
             @include font(3.6rem, 400, Chill);
-
           }
         }
       }
+    }
+    .section2 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5rem;
+      padding: 2rem 2.5rem;
+      .left,
+      .right {
+        display: contents;
+        p {
+          @include font(4rem, 500, Chill);
+        }
+      }
+    }
+    .section3 {
+      flex-direction: row-reverse;
+      .card {
+        width: 50%;
+        padding: 3rem;
+        .heading-content {
+          h6 {
+            @include font(0.9rem, 400, Rafi);
+            letter-spacing: 1px;
+          }
+        }
+        .bottom-content{
+          h3{
+            @include font(2.9rem, 500, Chill);
+            opacity: 0.9;
+          }
+          p{
+            @include center-flex(2.5rem);
+            flex-direction: row;
+            line-height: 1.5;
+            @include font(1.2rem, 200, Saifi);
+            opacity: 0.6;
+            span{
+              display: block;
+            }
+          }
+        }
+      }
+      .photo {
+        width: 50%;}
     }
   }
 }
