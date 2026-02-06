@@ -76,10 +76,10 @@ main .section1 .bottom .text-down button {
   width: -moz-fit-content;
   width: fit-content;
   background: transparent;
+  opacity: 0.7;
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 500;
   font-family: Rafi;
-  opacity: 0.8;
   color: white;
   border: none;
   text-transform: uppercase;
@@ -140,7 +140,7 @@ main .section3 {
   flex-direction: column;
   display: flex;
   gap: 1rem;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 main .section3 .photo {
   width: 100%;
@@ -176,6 +176,7 @@ main .section3 .card .bottom-content h3 {
   font-size: 2rem;
   font-weight: 500;
   font-family: Chill;
+  opacity: 0.9;
 }
 main .section3 .card .bottom-content p {
   font-size: 1.1rem;
@@ -184,6 +185,175 @@ main .section3 .card .bottom-content p {
   line-height: 1.4;
   word-spacing: 2px;
   opacity: 0.6;
+}
+main .section4 {
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+main .section4 .photo {
+  width: 100%;
+}
+main .section4 .photo img {
+  width: 100%;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .section4 .card {
+  background: #1e1e1e;
+  padding: 2rem;
+  flex-direction: column;
+  display: flex;
+  gap: 3rem;
+  border-radius: 10px;
+}
+main .section4 .card .heading-content h6 {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: Rafi;
+  opacity: 0.9;
+  text-transform: uppercase;
+}
+main .section4 .card .bottom-content {
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+}
+main .section4 .card .bottom-content h3 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: Chill;
+  opacity: 0.9;
+}
+main .section4 .card .bottom-content p {
+  font-size: 1.1rem;
+  font-weight: 200;
+  font-family: Saifi;
+  line-height: 1.4;
+  word-spacing: 2px;
+  opacity: 0.6;
+}
+main .section5 {
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+main .section5 .part1 {
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+}
+main .section5 .part1 article {
+  background-image: url(./img3.webp);
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  opacity: 0.8;
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: space-between;
+}
+main .section5 .part1 article .content-top {
+  flex-direction: column;
+  display: flex;
+  gap: 0.8rem;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+main .section5 .part1 article .content-top i {
+  background: rgba(228, 227, 227, 0.3960784314);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  font-size: 1.1rem;
+  font-weight: 100;
+  padding: 0.7rem;
+  border-radius: 50%;
+}
+main .section5 .part1 article .content-bottom {
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  background: rgba(133, 132, 132, 0.2745098039);
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+main .section5 .part1 article .content-bottom h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: Chill;
+  text-transform: uppercase;
+}
+main .section5 .part1 article .content-bottom p {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: Rafi;
+}
+main .section5 .part2 {
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+}
+main .section5 .part2 > div {
+  background-image: url(./img4.webp);
+  aspect-ratio: 4/3;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+}
+main .section5 .part2 article {
+  background: #1e1e1e;
+  padding: 2rem;
+  flex-direction: column;
+  display: flex;
+  gap: 4rem;
+  justify-content: space-between;
+}
+main .section5 .part2 article .article-top {
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+}
+main .section5 .part2 article .article-top p {
+  opacity: 0.8;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: Rafi;
+  text-transform: uppercase;
+}
+main .section5 .part2 article .article-top h3 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: Chill;
+  opacity: 0.9;
+}
+main .section5 .part2 article .article-bottom {
+  flex-direction: column;
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+}
+main .section5 .part2 article .article-bottom i {
+  font-size: 1.5rem;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  opacity: 0.7;
+}
+main .section5 .part2 article .article-bottom p {
+  opacity: 0.7;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: Rafi;
 }
 
 @media (min-width: 600px) {
@@ -226,6 +396,7 @@ main .section3 .card .bottom-content p {
   main .section3 .card {
     width: 50%;
     padding: 3rem;
+    justify-content: space-between;
   }
   main .section3 .card .heading-content h6 {
     font-size: 0.9rem;
@@ -255,5 +426,59 @@ main .section3 .card .bottom-content p {
   }
   main .section3 .photo {
     width: 50%;
+  }
+  main .section4 {
+    flex-direction: row;
+  }
+  main .section4 .card {
+    width: 50%;
+    padding: 3rem;
+    justify-content: space-between;
+  }
+  main .section4 .card .heading-content h6 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    font-family: Rafi;
+    letter-spacing: 1px;
+  }
+  main .section4 .card .bottom-content h3 {
+    font-size: 2.9rem;
+    font-weight: 500;
+    font-family: Chill;
+    opacity: 0.9;
+  }
+  main .section4 .card .bottom-content p {
+    flex-direction: column;
+    display: flex;
+    gap: 2.5rem;
+    flex-direction: row;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    font-weight: 200;
+    font-family: Saifi;
+    opacity: 0.6;
+  }
+  main .section4 .card .bottom-content p span {
+    display: block;
+  }
+  main .section4 .photo {
+    width: 50%;
+  }
+  main .section5 {
+    display: grid;
+    grid-template-rows: 7fr 8fr;
+  }
+  main .section5 .part1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  main .section5 .part2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  main .section5 .part2 article .article-top h3 {
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: Chill;
   }
 }/*# sourceMappingURL=style.css.map */

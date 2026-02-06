@@ -36,6 +36,75 @@ body {
   font-weight: $weight;
   font-family: $family;
 }
+@mixin section-manage {
+  .photo {
+    width: 100%;
+    img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+  }
+  .card {
+    background: #1e1e1e;
+    padding: 2rem;
+    @include center-flex(3rem);
+    border-radius: 10px;
+    .heading-content {
+      h6 {
+        @include font(0.9rem, 500, Rafi);
+        opacity: 0.9;
+        text-transform: uppercase;
+      }
+    }
+    .bottom-content {
+      @include center-flex(1rem);
+      h3 {
+        text-transform: uppercase;
+        @include font(2rem, 500, Chill);
+        opacity: 0.9;
+      }
+      p {
+        @include font(1.1rem, 200, Saifi);
+        line-height: 1.4;
+        word-spacing: 2px;
+        opacity: 0.6;
+      }
+    }
+  }
+}
+@mixin section-manage-media-query {
+  .card {
+    width: 50%;
+    padding: 3rem;
+    justify-content: space-between;
+    .heading-content {
+      h6 {
+        @include font(0.9rem, 400, Rafi);
+        letter-spacing: 1px;
+      }
+    }
+    .bottom-content {
+      h3 {
+        @include font(2.9rem, 500, Chill);
+        opacity: 0.9;
+      }
+      p {
+        @include center-flex(2.5rem);
+        flex-direction: row;
+        line-height: 1.5;
+        @include font(1.2rem, 200, Saifi);
+        opacity: 0.6;
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+  .photo {
+    width: 50%;
+  }
+}
 main {
   width: 100%;
   color: white;
@@ -68,8 +137,8 @@ main {
         button {
           width: fit-content;
           background: transparent;
-          @include font(1rem, 300, Rafi);
-          opacity: 0.8;
+          opacity: 0.7;
+          @include font(1rem, 500, Rafi);
           color: white;
           border: none;
           text-transform: uppercase;
@@ -118,38 +187,101 @@ main {
   }
   .section3 {
     @include center-flex(1rem);
-    padding: 1rem;
-    .photo {
-      width: 100%;
-      img {
-        width: 100%;
+    padding: 0 1rem;
+    @include section-manage();
+  }
+  .section4 {
+    @include center-flex(1rem);
+    padding: 0 1rem;
+    @include section-manage();
+  }
+  .section5 {
+    @include center-flex(1rem);
+    padding: 0 1rem;
+    .part1 {
+      @include center-flex(1rem);
+      article {
+        background-image: url(./img3.webp);
+        background-position: center;
+        background-size: cover;
+        aspect-ratio: 1;
         border-radius: 10px;
-        object-fit: cover;
+        opacity: 0.8;
+        @include center-flex(1rem);
+        padding: 1rem;
+        justify-content: space-between;
+        .content-top {
+          @include center-flex(0.8rem);
+          flex-direction: row;
+          justify-content: flex-end;
+          padding: 1rem;
+          i {
+            background: #e4e3e365;
+            backdrop-filter: blur(5px);
+            font-size: 1.1rem;
+            font-weight: 100;
+            padding: 0.7rem;
+            border-radius: 50%;
+          }
+        }
+        .content-bottom {
+          backdrop-filter: blur(15px);
+          background: #85848446;
+          padding: 1rem;
+          border-radius: 10px;
+          display: flex;
+          justify-content: space-between;
+          h3 {
+            @include font(1.2rem, 500, Chill);
+            text-transform: uppercase;
+          }
+          p {
+            text-transform: uppercase;
+            @include font(1rem, 500, Rafi);
+          }
+        }
       }
     }
-    .card {
-      background: #1e1e1e;
-      padding: 2rem;
-      @include center-flex(3rem);
-      border-radius: 10px;
-      .heading-content {
-        h6 {
-          @include font(0.9rem, 500, Rafi);
-          opacity: 0.9;
-          text-transform: uppercase;
-        }
+    .part2 {
+      @include center-flex(1rem);
+      > div {
+        background-image: url(./img4.webp);
+        aspect-ratio: 4/3;
+        background-position: center;
+        background-size: cover;
+        border-radius: 10px;
       }
-      .bottom-content {
-        @include center-flex(1rem);
-        h3 {
-          text-transform: uppercase;
-          @include font(2rem, 500, Chill);
+      article {
+        background: #1e1e1e;
+        padding: 2rem;
+        @include center-flex(4rem);
+        justify-content: space-between;
+        .article-top {
+          @include center-flex(1rem);
+          p {
+            opacity: 0.8;
+            @include font(1rem, 300, Rafi);
+            text-transform: uppercase;
+          }
+          h3 {
+            text-transform: uppercase;
+            @include font(2rem, 500, Chill);
+            opacity: 0.9;
+          }
         }
-        p {
-          @include font(1.1rem, 200, Saifi);
-          line-height: 1.4;
-          word-spacing: 2px;
-          opacity: 0.6;
+        .article-bottom {
+          @include center-flex(1rem);
+          flex-direction: row;
+          i {
+            font-size: 1.5rem;
+            vertical-align: middle;
+            margin-right: 0.5rem;
+            opacity: 0.7;
+          }
+          p {
+            opacity: 0.7;
+            @include font(1rem, 500, Rafi);
+          }
         }
       }
     }
@@ -188,34 +320,37 @@ main {
     }
     .section3 {
       flex-direction: row-reverse;
-      .card {
-        width: 50%;
-        padding: 3rem;
-        .heading-content {
-          h6 {
-            @include font(0.9rem, 400, Rafi);
-            letter-spacing: 1px;
-          }
-        }
-        .bottom-content{
-          h3{
-            @include font(2.9rem, 500, Chill);
-            opacity: 0.9;
-          }
-          p{
-            @include center-flex(2.5rem);
-            flex-direction: row;
-            line-height: 1.5;
-            @include font(1.2rem, 200, Saifi);
-            opacity: 0.6;
-            span{
-              display: block;
+      @include section-manage-media-query();
+    }
+    .section4 {
+      @include section-manage-media-query();
+      flex-direction: row;
+    }
+    .section5{
+      display: grid;
+      grid-template-rows: 7fr 8fr;
+      .part1{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .part2{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        article{
+          .article-top{
+            h3{
+              @include font(3rem, 500, Chill);
             }
           }
+      //     @include center-flex(1rem);
+      // h3 {
+      //   text-transform: uppercase;
+      //   @include font(4rem, 500, Chill);
+      //   opacity: 0.9;
+      }
+      
         }
       }
-      .photo {
-        width: 50%;}
     }
   }
-}
+
